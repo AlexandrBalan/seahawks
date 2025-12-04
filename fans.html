@@ -1,0 +1,113 @@
+<!-- 
+ Alexandr Balan
+Final Project Theme: Seahawks Fan Page Website
+Date: 12/4/25
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seahawks – Fans</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        Seahawks Fan Made Website<span class="small-tag">GO HAWKS!</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="roster.html">Roster</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="fans.html">Fans</a></li>
+        </ul>
+      </nav>
+      <button class="dark-btn" type="button" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="fan-layout">
+      <div>
+        <h1>For the 12s</h1>
+        <p>
+          This page is just for fun – a place to sign up and see a few game day ideas.
+        </p>
+
+        <h2>Game Day Tips</h2>
+        <button class="btn" type="button" onclick="toggleTips()">Show / Hide Tips</button>
+
+        <div id="gameday-tips" class="hidden">
+          <p><strong>Simple tips:</strong></p>
+          <ul>
+            <li>Wear blue and green.</li>
+            <li>Get to the game early.</li>
+            <li>Stay loud on defense.</li>
+          </ul>
+          <img src="img/hawks12.jpg" alt="Fans holding Seahawks flags">
+        </div>
+      </div>
+
+      <div>
+        <h2>Fan Sign-Up</h2>
+        <p>
+          Fill this out to “join” this little fan list.
+        </p>
+
+        <form
+          action="https://script.google.com/macros/s/AKfycbz6cewkwC6P68-qotOokhBb_v1Zxr3aozRItX-rFramd4p_7R3XzwHLj7o1mN-6Okez/exec"
+          method="POST" onsubmit="showFormMessage()">
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="fav">Favorite Part of Seahawks Football</label>
+            <select id="fav" name="favorite">
+              <option value="defense">Defense</option>
+              <option value="offense">Offense</option>
+              <option value="special-teams">Special Teams</option>
+              <option value="crowd">Crowd Energy</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Say hi or leave a short note."></textarea>
+          </div>
+
+          <button class="btn" type="submit">Submit</button>
+          <div id="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2>Fan Photos</h2>
+      <p>More simple shots to keep the page from being all text.</p>
+      <div class="fan-photos">
+        <img src="img/hawks1.jpg" alt="Seahawks players lined up">
+        <img src="img/hawks3.jpg" alt="Crowd cheering in the stands">
+        <img src="img/hawks4.jpg" alt="Stadium view from above">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2025 Seahawks Fan Project Site made by Alexandr Balan</p>
+  </footer>
+</body>
+
+</html>
